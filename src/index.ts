@@ -85,17 +85,17 @@ export namespace transaction {
         T extends TransactionType.Deposit ? DepositTransactionFactory.IStartParams :
         T extends TransactionType.Pay ? PayTransactionFactory.IStartParams :
         T extends TransactionType.Transfer ? TransferTransactionFactory.IStartParams :
-        TransactionFactory.IStartParams<any, any, any>;
+        TransactionFactory.IStartParams<TransactionType, any, any, any>;
     export type IAttributes<T> =
         T extends TransactionType.Deposit ? DepositTransactionFactory.IAttributes :
         T extends TransactionType.Pay ? PayTransactionFactory.IAttributes :
         T extends TransactionType.Transfer ? TransferTransactionFactory.IAttributes :
-        TransactionFactory.IAttributes<any, any, any>;
+        TransactionFactory.IAttributes<any, any, any, any>;
     export type ITransaction<T> =
         T extends TransactionType.Deposit ? DepositTransactionFactory.ITransaction :
         T extends TransactionType.Pay ? PayTransactionFactory.ITransaction :
         T extends TransactionType.Transfer ? TransferTransactionFactory.ITransaction :
-        TransactionFactory.ITransaction<any, any, any>;
+        TransactionFactory.ITransaction<any, any, any, any>;
     export type IResult<T> =
         T extends TransactionType.Deposit ? DepositTransactionFactory.IResult :
         T extends TransactionType.Pay ? PayTransactionFactory.IResult :
