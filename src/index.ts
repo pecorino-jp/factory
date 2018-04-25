@@ -81,7 +81,31 @@ export import taskExecutionResult = TaskExecutionResultFactory;
 export import taskName = TaskName;
 export import taskStatus = TaskStatus;
 export namespace transaction {
-    export import ITransaction = TransactionFactory.ITransaction;
+    export type IStartParams<T> =
+        T extends TransactionType.Deposit ? DepositTransactionFactory.IStartParams :
+        T extends TransactionType.Pay ? PayTransactionFactory.IStartParams :
+        T extends TransactionType.Transfer ? TransferTransactionFactory.IStartParams :
+        TransactionFactory.IStartParams<any, any, any>;
+    export type IAttributes<T> =
+        T extends TransactionType.Deposit ? DepositTransactionFactory.IAttributes :
+        T extends TransactionType.Pay ? PayTransactionFactory.IAttributes :
+        T extends TransactionType.Transfer ? TransferTransactionFactory.IAttributes :
+        TransactionFactory.IAttributes<any, any, any>;
+    export type ITransaction<T> =
+        T extends TransactionType.Deposit ? DepositTransactionFactory.ITransaction :
+        T extends TransactionType.Pay ? PayTransactionFactory.ITransaction :
+        T extends TransactionType.Transfer ? TransferTransactionFactory.ITransaction :
+        TransactionFactory.ITransaction<any, any, any>;
+    export type IResult<T> =
+        T extends TransactionType.Deposit ? DepositTransactionFactory.IResult :
+        T extends TransactionType.Pay ? PayTransactionFactory.IResult :
+        T extends TransactionType.Transfer ? TransferTransactionFactory.IResult :
+        any;
+    export type IPotentialActions<T> =
+        T extends TransactionType.Deposit ? DepositTransactionFactory.IPotentialActions :
+        T extends TransactionType.Pay ? PayTransactionFactory.IPotentialActions :
+        T extends TransactionType.Transfer ? TransferTransactionFactory.IPotentialActions :
+        any;
     export import pay = PayTransactionFactory;
     export import deposit = DepositTransactionFactory;
     export import transfer = TransferTransactionFactory;

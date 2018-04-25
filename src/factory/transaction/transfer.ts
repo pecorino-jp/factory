@@ -13,6 +13,11 @@ import TransactionStatusType from '../transactionStatusType';
 import TransactionTasksExportationStatus from '../transactionTasksExportationStatus';
 import TransactionType from '../transactionType';
 
+/**
+ * 取引開始パラメーターインターフェース
+ */
+export type IStartParams = TransactionFactory.IStartParams<IObject, IRecipient, IObject>;
+
 export interface IRecipient {
     typeOf: OrganizationType | PersonType;
     id: string;
