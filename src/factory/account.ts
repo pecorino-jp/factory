@@ -46,7 +46,7 @@ export interface IAccount {
     /**
      * 利用可能残高
      */
-    safeBalance: number;
+    availableBalance: number;
     /**
      * 進行中取引リスト
      */
