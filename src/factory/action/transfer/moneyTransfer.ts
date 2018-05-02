@@ -1,7 +1,6 @@
 /**
- * 貨幣転送アクションファクトリー
+ * 金額転送アクションファクトリー
  */
-
 import * as AccountFactory from '../../account';
 import * as ActionFactory from '../../action';
 import ActionType from '../../actionType';
@@ -52,6 +51,7 @@ export interface IPurpose {
 }
 
 export interface IAttributes extends ActionFactory.IAttributes<IObject, IResult> {
+    typeOf: ActionType.MoneyTransfer;
     /**
      * どんな取引によって発生した転送アクションか
      */
@@ -71,28 +71,3 @@ export interface IAttributes extends ActionFactory.IAttributes<IObject, IResult>
 }
 
 export type IAction = ActionFactory.IAction<IAttributes>;
-
-export function createAttributes<TObject, TResult>(params: {
-    result?: TResult;
-    object: TObject;
-    agent: IAgent;
-    recipient: ActionFactory.IParticipant;
-    potentialActions?: IPotentialActions;
-    purpose: IPurpose;
-    amount: number;
-    fromLocation: ILocation;
-    toLocation: ILocation;
-}): IAttributes {
-    return {
-        typeOf: ActionType.MoneyTransfer,
-        result: params.result,
-        object: params.object,
-        agent: params.agent,
-        recipient: params.recipient,
-        potentialActions: params.potentialActions,
-        purpose: params.purpose,
-        amount: params.amount,
-        fromLocation: params.fromLocation,
-        toLocation: params.toLocation
-    };
-}
