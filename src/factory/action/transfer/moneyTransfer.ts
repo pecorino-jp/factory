@@ -22,7 +22,7 @@ export interface IAnonymousLocation {
  */
 export interface IAccount {
     typeOf: AccountFactory.AccountType.Account;
-    id: string;
+    accountNumber: string;
     name: string;
 }
 

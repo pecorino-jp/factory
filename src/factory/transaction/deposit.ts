@@ -45,11 +45,11 @@ export type IError = any;
  */
 export interface IObject {
     clientUser: IClientUser;
-    price: number;
+    amount: number;
     /**
-     * 入金先口座ID
+     * 入金先口座番号
      */
-    toAccountId: string;
+    toAccountNumber: string;
     notes: string;
 }
 

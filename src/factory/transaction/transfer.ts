@@ -45,9 +45,9 @@ export type IError = any;
  */
 export interface IObject {
     clientUser: IClientUser;
-    price: number;
-    fromAccountId: string;
-    toAccountId: string;
+    amount: number;
+    fromAccountNumber: string;
+    toAccountNumber: string;
     notes: string;
 }
 

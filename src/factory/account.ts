@@ -21,6 +21,10 @@ export interface IPendingTransaction {
      * 取引ID
      */
     id: string;
+    /**
+     * 取引金額
+     */
+    amount: number;
 }
 
 /**
@@ -35,6 +39,10 @@ export interface IAccount {
      * 口座ID
      */
     id: string;
+    /**
+     * 口座番号
+     */
+    accountNumber: string;
     /**
      * 口座名義
      */
