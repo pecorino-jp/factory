@@ -2,7 +2,6 @@
  * pecorino-factory
  * @module
  */
-
 import * as AccountFactory from './factory/account';
 import AccountStatusType from './factory/accountStatusType';
 
@@ -27,8 +26,8 @@ import TaskStatus from './factory/taskStatus';
 
 import * as TransactionFactory from './factory/transaction';
 import * as DepositTransactionFactory from './factory/transaction/deposit';
-import * as PayTransactionFactory from './factory/transaction/pay';
 import * as TransferTransactionFactory from './factory/transaction/transfer';
+import * as WithdrawTransactionFactory from './factory/transaction/withdraw';
 import TransactionStatusType from './factory/transactionStatusType';
 import TransactionTasksExportationStatus from './factory/transactionTasksExportationStatus';
 import TransactionType from './factory/transactionType';
@@ -83,30 +82,30 @@ export import taskStatus = TaskStatus;
 export namespace transaction {
     export type IStartParams<T> =
         T extends TransactionType.Deposit ? DepositTransactionFactory.IStartParams :
-        T extends TransactionType.Pay ? PayTransactionFactory.IStartParams :
+        T extends TransactionType.Withdraw ? WithdrawTransactionFactory.IStartParams :
         T extends TransactionType.Transfer ? TransferTransactionFactory.IStartParams :
         TransactionFactory.IStartParams<TransactionType, any, any, any>;
     export type IAttributes<T> =
         T extends TransactionType.Deposit ? DepositTransactionFactory.IAttributes :
-        T extends TransactionType.Pay ? PayTransactionFactory.IAttributes :
+        T extends TransactionType.Withdraw ? WithdrawTransactionFactory.IAttributes :
         T extends TransactionType.Transfer ? TransferTransactionFactory.IAttributes :
         TransactionFactory.IAttributes<any, any, any, any>;
     export type ITransaction<T> =
         T extends TransactionType.Deposit ? DepositTransactionFactory.ITransaction :
-        T extends TransactionType.Pay ? PayTransactionFactory.ITransaction :
+        T extends TransactionType.Withdraw ? WithdrawTransactionFactory.ITransaction :
         T extends TransactionType.Transfer ? TransferTransactionFactory.ITransaction :
         TransactionFactory.ITransaction<any, any, any, any>;
     export type IResult<T> =
         T extends TransactionType.Deposit ? DepositTransactionFactory.IResult :
-        T extends TransactionType.Pay ? PayTransactionFactory.IResult :
+        T extends TransactionType.Withdraw ? WithdrawTransactionFactory.IResult :
         T extends TransactionType.Transfer ? TransferTransactionFactory.IResult :
         any;
     export type IPotentialActions<T> =
         T extends TransactionType.Deposit ? DepositTransactionFactory.IPotentialActions :
-        T extends TransactionType.Pay ? PayTransactionFactory.IPotentialActions :
+        T extends TransactionType.Withdraw ? WithdrawTransactionFactory.IPotentialActions :
         T extends TransactionType.Transfer ? TransferTransactionFactory.IPotentialActions :
         any;
-    export import pay = PayTransactionFactory;
+    export import withdraw = WithdrawTransactionFactory;
     export import deposit = DepositTransactionFactory;
     export import transfer = TransferTransactionFactory;
 }

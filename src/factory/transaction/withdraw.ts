@@ -13,7 +13,7 @@ import TransactionType from '../transactionType';
 /**
  * 取引開始パラメーターインターフェース
  */
-export type IStartParams = TransactionFactory.IStartParams<TransactionType.Pay, IAgent, IRecipient, IObject>;
+export type IStartParams = TransactionFactory.IStartParams<TransactionType.Withdraw, IAgent, IRecipient, IObject>;
 
 export interface IRecipient {
     typeOf: OrganizationType | PersonType;

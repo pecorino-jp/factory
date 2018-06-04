@@ -4,9 +4,9 @@
 
 enum TransactionType {
     /**
-     * 支払取引
+     * 出金取引
      */
-    Pay = 'Pay',
+    Withdraw = 'Withdraw',
     /**
      * 入金取引
      */
