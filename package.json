@@ -5,12 +5,12 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
-    "doc/",
-    "example/",
-    "lib/"
+    "docs",
+    "example",
+    "lib"
   ],
   "directories": {
-    "doc": "./doc",
+    "doc": "./docs",
     "lib": "./lib",
     "example": "./example",
     "test": "./test"
@@ -18,8 +18,8 @@
   "scripts": {
     "build": "tsc",
     "check": "npm run tslint && nsp check",
-    "clean": "rimraf ./lib \"npm-debug.log*\" ./doc ./coverage ./.nyc_output",
-    "doc": "jsdoc -c jsdoc.json",
+    "clean": "rimraf ./lib \"npm-debug.log*\" ./docs ./coverage ./.nyc_output",
+    "doc": "typedoc --out ./docs/ --exclude **/*.spec.ts ./src/",
     "mocha": "mocha",
     "coverage": "nyc mocha \"src/**/*.spec.ts\" | coveralls",
     "snyk": "snyk wizard",
@@ -28,7 +28,7 @@
     "preversion": "npm run clean && npm run build && npm test",
     "version": "git add -A",
     "postversion": "git push origin --tags",
-    "prepublishOnly": "npm run clean && npm run build && npm test && npm run doc"
+    "prepublishOnly": "npm run clean && npm run build && npm test"
   },
   "author": {
     "name": "Motionpicture co.,ltd."
@@ -45,32 +45,26 @@
     "url": "https://github.com/motionpicture/pecorino-factory.git"
   },
   "dependencies": {
-    "debug": "^3.1.0",
-    "lodash": "^4.17.5",
-    "setprototypeof": "^1.1.0",
-    "validator": "^9.4.1"
+    "setprototypeof": "^1.1.0"
   },
   "devDependencies": {
-    "@types/debug": "0.0.30",
-    "@types/lodash": "^4.14.107",
-    "@types/mocha": "^5.0.0",
-    "@types/node": "^9.6.5",
+    "@types/mocha": "^5.2.1",
+    "@types/node": "^9.6.20",
     "@types/power-assert": "^1.5.0",
-    "@types/sinon": "^4.3.1",
-    "@types/validator": "^9.4.0",
-    "coveralls": "^3.0.0",
+    "@types/sinon": "^5.0.1",
+    "coveralls": "^3.0.1",
     "ink-docstrap": "^1.3.2",
-    "jsdoc": "^3.5.5",
-    "mocha": "^5.1.0",
+    "mocha": "^5.2.0",
     "nsp": "^3.2.1",
-    "nyc": "^11.6.0",
+    "nyc": "^12.0.2",
     "power-assert": "^1.5.0",
     "rimraf": "^2.6.2",
-    "sinon": "^4.5.0",
-    "snyk": "^1.71.0",
+    "sinon": "^5.0.10",
+    "snyk": "^1.82.1",
     "ts-node": "^5.0.1",
-    "tslint": "^5.9.1",
+    "tslint": "^5.10.0",
     "tslint-microsoft-contrib": "^5.0.3",
-    "typescript": "^2.8.3"
+    "typedoc": "^0.11.1",
+    "typescript": "^2.9.1"
   }
 }
