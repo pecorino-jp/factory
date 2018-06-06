@@ -28,7 +28,7 @@
     "preversion": "npm run clean && npm run build && npm test && npm run doc",
     "version": "git add -A",
     "postversion": "git push origin --tags",
-    "prepublishOnly": "npm run clean && npm run build && npm test npm run doc"
+    "prepublishOnly": "npm run clean && npm run build && npm test && npm run doc"
   },
   "author": {
     "name": "Motionpicture co.,ltd."
