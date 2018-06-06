@@ -5,7 +5,6 @@
 
 /**
  * クライアントユーザーインターフェース
- * @export
  */
 export interface IClientUser {
     sub: string;

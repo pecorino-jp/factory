@@ -1,7 +1,6 @@
 /**
  * 取引タイプ
  */
-
 enum TransactionType {
     /**
      * 出金取引

@@ -1,7 +1,6 @@
 /**
  * 口座ファクトリー
  */
-
 import AccountStatusType from './accountStatusType';
 import TransactionType from './transactionType';
 
@@ -9,6 +8,9 @@ import TransactionType from './transactionType';
  * 口座タイプ
  */
 export enum AccountType {
+    /**
+     * 普通口座タイプ
+     */
     Account = 'Account'
 }
 
@@ -35,10 +37,6 @@ export interface IAccount {
      * 口座タイプ
      */
     typeOf: AccountType;
-    /**
-     * 口座ID
-     */
-    id: string;
     /**
      * 口座番号
      */

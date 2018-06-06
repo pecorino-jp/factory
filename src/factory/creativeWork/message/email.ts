@@ -1,6 +1,5 @@
 /**
  * Eメールメッセージファクトリー
- * @namespace creativeWork.message.email
  */
 import * as CreativeWorkFactory from '../../creativeWork';
 import CreativeWorkType from '../../creativeWorkType';

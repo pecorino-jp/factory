@@ -1,7 +1,6 @@
 /**
  * 取引ステータス
  */
-
 enum TransactionStatusType {
     InProgress = 'InProgress',
     Canceled = 'Canceled',

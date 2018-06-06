@@ -1,8 +1,6 @@
 /**
  * errors
- * @namespace errors
  */
-
 import AlreadyInUseError from './error/alreadyInUse';
 import ArgumentError from './error/argument';
 import ArgumentNullError from './error/argumentNull';

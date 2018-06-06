@@ -13,7 +13,8 @@ export default class NotImplementedError extends PecorinoError {
             actualMessage = 'Method is not yet implemented.';
         }
 
-        super(ErrorCode.NotImplemented, actualMessage);
+        // tslint:disable-next-line:no-single-line-block-comment
+        super(ErrorCode.NotImplemented, actualMessage)/* istanbul ignore next */;
 
         setPrototypeOf(this, NotImplementedError.prototype);
     }

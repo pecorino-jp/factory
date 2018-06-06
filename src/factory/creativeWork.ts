@@ -1,13 +1,11 @@
-/**
- * 作品ファクトリー
- * @namespace creativeWork
- */
 import CreativeWorkType from './creativeWorkType';
 
 export interface ICopyrightHolder {
     name: string;
 }
-
+/**
+ * 作品インターフェース
+ */
 export interface ICreativeWork {
     typeOf: CreativeWorkType;
     identifier: string;

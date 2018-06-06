@@ -1,7 +1,6 @@
 /**
  * 組織タイプ
  */
-
 enum OrganizationType {
     Corporation = 'Corporation'
 }

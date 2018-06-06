@@ -13,7 +13,8 @@ export default class UnauthorizedError extends PecorinoError {
             actualMessage = 'Unauthorized.';
         }
 
-        super(ErrorCode.Unauthorized, actualMessage);
+        // tslint:disable-next-line:no-single-line-block-comment
+        super(ErrorCode.Unauthorized, actualMessage)/* istanbul ignore next */;
 
         setPrototypeOf(this, UnauthorizedError.prototype);
     }

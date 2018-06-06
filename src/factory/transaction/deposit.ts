@@ -17,16 +17,16 @@ export type IStartParams = TransactionFactory.IStartParams<TransactionType.Depos
 
 export interface IRecipient {
     typeOf: OrganizationType | PersonType;
-    id: string;
+    id?: string;
     name: string;
-    url: string;
+    url?: string;
 }
 
 export interface IAgent {
     typeOf: OrganizationType | PersonType;
-    id: string;
+    id?: string;
     name: string;
-    url: string;
+    url?: string;
 }
 
 export type IResult = any;
@@ -34,14 +34,12 @@ export type IResult = any;
 /**
  * error interface
  * エラーインターフェース
- * @export
  */
 export type IError = any;
 
 /**
  * object of a transaction interface
  * 取引対象物インターフェース
- * @export
  */
 export interface IObject {
     clientUser: IClientUser;

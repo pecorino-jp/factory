@@ -15,7 +15,8 @@ export default class NotFoundError extends PecorinoError {
             actualMessage = `Not Found: ${entityName}.`;
         }
 
-        super(ErrorCode.NotFound, actualMessage);
+        // tslint:disable-next-line:no-single-line-block-comment
+        super(ErrorCode.NotFound, actualMessage)/* istanbul ignore next */;
 
         this.entityName = entityName;
 

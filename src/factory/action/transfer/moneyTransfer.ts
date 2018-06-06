@@ -14,7 +14,8 @@ export type IRecipient = ActionFactory.IParticipant;
  */
 export interface IAnonymousLocation {
     typeOf: string;
-    name: string;
+    id?: string;
+    name?: string;
 }
 
 /**

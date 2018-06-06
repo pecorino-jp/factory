@@ -1,7 +1,6 @@
 /**
  * タスクステータス
  */
-
 enum TaskStatus {
     /**
      * 準備OK

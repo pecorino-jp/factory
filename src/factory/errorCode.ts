@@ -1,7 +1,6 @@
 /**
  * エラーコード
  */
-
 enum ErrorCode {
     AlreadyInUse = 'AlreadyInUse',
     Argument = 'Argument',

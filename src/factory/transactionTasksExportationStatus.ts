@@ -1,7 +1,6 @@
 /**
  * 取引タスクエクスポートステータス
  */
-
 enum TransactionTasksExportationStatus {
     /**
      * 未エクスポート
