@@ -19,7 +19,7 @@
     "build": "tsc",
     "check": "npm run tslint && nsp check",
     "clean": "rimraf ./lib \"npm-debug.log*\" ./docs ./coverage ./.nyc_output",
-    "doc": "echo implementing...",
+    "doc": "echo \"implementing...\" && exit 0",
     "mocha": "mocha",
     "coverage": "nyc mocha \"src/**/*.spec.ts\" | coveralls",
     "snyk": "snyk wizard",
