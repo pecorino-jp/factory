@@ -1,9 +1,7 @@
 /**
  * Eメール送信アクションファクトリー
  */
-
 import * as ActionFactory from '../../../../action';
-import ActionStatusType from '../../../../actionStatusType';
 import { ICreativeWork as IEmailMessage } from '../../../../creativeWork/message/email';
 import * as SendActionFactory from '../../send';
 
@@ -34,19 +32,3 @@ export interface IAttributes extends SendActionFactory.IAttributes<IObject, IRes
 }
 
 export type IAction = SendActionFactory.IAction<IAttributes>;
-
-export function createAttributes(params: {
-    actionStatus: ActionStatusType;
-    result?: IResult;
-    object: IObject;
-    agent: IAgent;
-    recipient: IRecipient;
-    potentialActions?: IPotentialActions;
-    purpose: IPurpose;
-}): IAttributes {
-    return {
-        ...SendActionFactory.createAttributes(params),
-        potentialActions: params.potentialActions,
-        purpose: params.purpose
-    };
-}
