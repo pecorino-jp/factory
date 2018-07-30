@@ -17,7 +17,7 @@ export enum TypeOf {
  * 口座タイプ
  * Pecorinoサービス利用側で定義&管理する想定
  */
-export type AccountType = string | undefined;
+export type AccountType = string;
 /**
  * 進行中取引インターフェース
  */
