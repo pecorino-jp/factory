@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v1.0.0 - 2018-07-30
+
+### Changed
+
+- 口座タイプ属性を必須に変更。
+
 ## v0.1.0 - 2018-07-30
 
 ### Changed
