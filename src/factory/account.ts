@@ -7,13 +7,17 @@ import TransactionType from './transactionType';
 /**
  * 口座タイプ
  */
-export enum AccountType {
+export enum TypeOf {
     /**
      * 普通口座タイプ
      */
     Account = 'Account'
 }
-
+/**
+ * 口座タイプ
+ * Pecorinoサービス利用側で定義&管理する想定
+ */
+export type AccountType = string | undefined;
 /**
  * 進行中取引インターフェース
  */
@@ -28,15 +32,15 @@ export interface IPendingTransaction {
      */
     amount: number;
 }
-
 /**
  * 口座インターフェース
  */
-export interface IAccount {
+export interface IAccount<T extends AccountType> {
+    typeOf: TypeOf;
     /**
      * 口座タイプ
      */
-    typeOf: AccountType;
+    accountType: T;
     /**
      * 口座番号
      */

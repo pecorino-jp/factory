@@ -10,6 +10,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- 口座に口座タイプ属性を追加。
+- 取引の関係者タイプを汎用的に拡張。
+
 ### Deprecated
 
 ### Removed

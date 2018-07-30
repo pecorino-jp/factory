@@ -1,7 +1,7 @@
 {
   "name": "@pecorino/factory",
   "version": "0.0.1",
-  "description": "PECORINO factory library.",
+  "description": "Pecorino Factory Library.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
