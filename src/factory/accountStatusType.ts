@@ -11,5 +11,4 @@ enum AccountStatusType {
      */
     Closed = 'Closed'
 }
-
 export default AccountStatusType;

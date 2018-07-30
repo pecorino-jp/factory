@@ -18,6 +18,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v0.1.0 - 2018-07-30
+
+### Changed
+
+- 口座に口座タイプ属性を追加。
+- 取引の関係者タイプを汎用的に拡張。
+
 ## v0.0.1 - 2018-07-24
 
 ### Changed
