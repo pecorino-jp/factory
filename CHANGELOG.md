@@ -16,6 +16,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Fixed
 
+- ciでデプロイできないバグに対応。
+
 ### Security
 
 ## v1.0.0 - 2018-07-30
