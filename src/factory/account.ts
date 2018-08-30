@@ -1,6 +1,3 @@
-/**
- * 口座ファクトリー
- */
 import AccountStatusType from './accountStatusType';
 import TransactionType from './transactionType';
 
@@ -73,4 +70,45 @@ export interface IAccount<T extends AccountType> {
      * 口座ステータス
      */
     status: AccountStatusType;
+}
+/**
+ * ソート条件インターフェース
+ */
+export interface ISortOrder {
+    /**
+     * 口座番号順
+     */
+    accountNumber?: 1 | -1;
+    /**
+     * 開設日時順
+     */
+    openDate?: 1 | -1;
+    /**
+     * 残高順
+     */
+    balance?: 1 | -1;
+}
+/**
+ * 口座検索条件インターフェース
+ */
+export interface ISearchConditions<T extends AccountType> {
+    limit?: number;
+    page?: number;
+    sort?: ISortOrder;
+    /**
+     * 口座タイプ
+     */
+    accountType: T;
+    /**
+     * 口座番号リスト
+     */
+    accountNumbers: string[];
+    /**
+     * 口座ステータスリスト
+     */
+    statuses: AccountStatusType[];
+    /**
+     * 口座名義
+     */
+    name?: string;
 }

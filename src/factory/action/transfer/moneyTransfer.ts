@@ -1,6 +1,3 @@
-/**
- * 金額転送アクションファクトリー
- */
 import * as AccountFactory from '../../account';
 import * as ActionFactory from '../../action';
 import ActionType from '../../actionType';
@@ -85,3 +82,32 @@ export interface IAttributes<T extends AccountFactory.AccountType> extends Actio
     toLocation: ILocation<T>;
 }
 export type IAction<T extends AccountFactory.AccountType> = ActionFactory.IAction<IAttributes<T>>;
+/**
+ * ソート条件インターフェース
+ */
+export interface ISortOrder {
+    /**
+     * アクション完了日時順
+     */
+    endDate?: 1 | -1;
+    /**
+     * 金額順
+     */
+    amount?: 1 | -1;
+}
+/**
+ * 検索条件インターフェース
+ */
+export interface ISearchConditions<T extends AccountFactory.AccountType> {
+    limit?: number;
+    page?: number;
+    sort?: ISortOrder;
+    /**
+     * 口座タイプ
+     */
+    accountType: T;
+    /**
+     * 口座番号
+     */
+    accountNumber: string;
+}
