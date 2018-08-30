@@ -1,6 +1,7 @@
 import * as AccountFactory from '../../account';
 import * as ActionFactory from '../../action';
 import ActionType from '../../actionType';
+import SortType from '../../sortType';
 import TransactionType from '../../transactionType';
 
 export type IAgent = ActionFactory.IParticipant;
@@ -89,11 +90,11 @@ export interface ISortOrder {
     /**
      * アクション完了日時順
      */
-    endDate?: 1 | -1;
+    endDate?: SortType;
     /**
      * 金額順
      */
-    amount?: 1 | -1;
+    amount?: SortType;
 }
 /**
  * 検索条件インターフェース

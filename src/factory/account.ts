@@ -1,4 +1,5 @@
 import AccountStatusType from './accountStatusType';
+import SortType from './sortType';
 import TransactionType from './transactionType';
 
 /**
@@ -78,15 +79,15 @@ export interface ISortOrder {
     /**
      * 口座番号順
      */
-    accountNumber?: 1 | -1;
+    accountNumber?: SortType;
     /**
      * 開設日時順
      */
-    openDate?: 1 | -1;
+    openDate?: SortType;
     /**
      * 残高順
      */
-    balance?: 1 | -1;
+    balance?: SortType;
 }
 /**
  * 口座検索条件インターフェース
