@@ -16,9 +16,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Fixed
 
-- ciでデプロイできないバグに対応。
-
 ### Security
+
+## v1.1.0 - 2018-09-01
+
+### Changed
+
+- 口座に検索条件インターフェースを追加。
+- 転送アクションに検索条件インターフェースを追加。
+
+### Fixed
+
+- ciでデプロイできないバグに対応。
 
 ## v1.0.0 - 2018-07-30
 

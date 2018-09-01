@@ -29,6 +29,7 @@ import TransactionStatusType from './factory/transactionStatusType';
 import TransactionTasksExportationStatus from './factory/transactionTasksExportationStatus';
 import TransactionType from './factory/transactionType';
 
+import SortType from './factory/sortType';
 import * as URLFactory from './factory/url';
 
 import ErrorCode from './factory/errorCode';
@@ -71,6 +72,7 @@ export namespace task {
     export import cancelMoneyTransfer = CancelMoneyTransferTaskFactory;
     export import moneyTransfer = MoneyTransferTaskFactory;
 }
+export import sortType = SortType;
 export import taskExecutionResult = TaskExecutionResultFactory;
 export import taskName = TaskName;
 export import taskStatus = TaskStatus;
