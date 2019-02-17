@@ -10,9 +10,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- 各取引インターフェースを再構成
+
 ### Deprecated
 
 ### Removed
+
+- 不要なインターフェースを削除
 
 ### Fixed
 

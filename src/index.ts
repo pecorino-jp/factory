@@ -17,7 +17,6 @@ import PriceCurrency from './factory/priceCurrency';
 import * as TaskFactory from './factory/task';
 import * as CancelMoneyTransferTaskFactory from './factory/task/cancelMoneyTransfer';
 import * as MoneyTransferTaskFactory from './factory/task/moneyTransfer';
-import * as TaskExecutionResultFactory from './factory/taskExecutionResult';
 import TaskName from './factory/taskName';
 import TaskStatus from './factory/taskStatus';
 
@@ -30,7 +29,6 @@ import TransactionTasksExportationStatus from './factory/transactionTasksExporta
 import TransactionType from './factory/transactionType';
 
 import SortType from './factory/sortType';
-import * as URLFactory from './factory/url';
 
 import ErrorCode from './factory/errorCode';
 import * as errors from './factory/errors';
@@ -68,12 +66,12 @@ export import creativeWorkType = CreativeWorkType;
 export import priceCurrency = PriceCurrency;
 export namespace task {
     export import IAttributes = TaskFactory.IAttributes;
+    export import IExecutionResult = TaskFactory.IExecutionResult;
     export import ITask = TaskFactory.ITask;
     export import cancelMoneyTransfer = CancelMoneyTransferTaskFactory;
     export import moneyTransfer = MoneyTransferTaskFactory;
 }
 export import sortType = SortType;
-export import taskExecutionResult = TaskExecutionResultFactory;
 export import taskName = TaskName;
 export import taskStatus = TaskStatus;
 export namespace transaction {
@@ -109,4 +107,3 @@ export namespace transaction {
 export import transactionStatusType = TransactionStatusType;
 export import transactionTasksExportationStatus = TransactionTasksExportationStatus;
 export import transactionType = TransactionType;
-export import url = URLFactory;

@@ -24,6 +24,7 @@ export interface IAnonymousLocation {
      */
     name?: string;
 }
+
 /**
  * 口座インターフェース
  */
@@ -40,15 +41,20 @@ export interface IAccount<T extends AccountFactory.AccountType> {
     /**
      * 口座名義
      */
-    name: string;
+    name?: string;
 }
+
 /**
  * 転送元あるいは転送先の場所インターフェース
  */
 export type ILocation<T extends AccountFactory.AccountType> = IAnonymousLocation | IAccount<T>;
+
 export type IObject = any;
+
 export type IResult = any;
+
 export type IPotentialActions = any;
+
 /**
  * アクションの目的インターフェース
  * ここでは、取引が目的となる
@@ -63,6 +69,7 @@ export interface IPurpose {
      */
     id: string;
 }
+
 export interface IAttributes<T extends AccountFactory.AccountType> extends ActionFactory.IAttributes<IObject, IResult> {
     typeOf: ActionType.MoneyTransfer;
     /**
@@ -82,7 +89,9 @@ export interface IAttributes<T extends AccountFactory.AccountType> extends Actio
      */
     toLocation: ILocation<T>;
 }
+
 export type IAction<T extends AccountFactory.AccountType> = ActionFactory.IAction<IAttributes<T>>;
+
 /**
  * ソート条件インターフェース
  */
@@ -96,6 +105,7 @@ export interface ISortOrder {
      */
     amount?: SortType;
 }
+
 /**
  * 検索条件インターフェース
  */
