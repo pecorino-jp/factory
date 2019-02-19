@@ -10,17 +10,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
-- 各取引インターフェースを再構成
-
 ### Deprecated
 
 ### Removed
 
-- 不要なインターフェースを削除
-
 ### Fixed
 
 ### Security
+
+## v2.0.0 - 2019-02-19
+
+### Changed
+
+- 各取引インターフェースを再構成
+
+### Removed
+
+- 不要なインターフェースを削除
 
 ## v1.1.0 - 2018-09-01
 
