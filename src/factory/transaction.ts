@@ -3,10 +3,24 @@ import TransactionStatusType from './transactionStatusType';
 import TransactionTasksExportationStatus from './transactionTasksExportationStatus';
 import TransactionType from './transactionType';
 
+export interface IRecipient {
+    typeOf: string;
+    id?: string;
+    name: string;
+    url?: string;
+}
+
+export interface IAgent {
+    typeOf: string;
+    id?: string;
+    name: string;
+    url?: string;
+}
+
 /**
  * 取引開始パラメーターインターフェース
  */
-export interface IStartParams<T extends TransactionType, TAgent, TRecipient, TObject> {
+export interface IStartParams<T extends TransactionType, TAgent extends IAgent, TRecipient extends IRecipient, TObject> {
     /**
      * 取引タイプ
      */
