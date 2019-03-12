@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- 口座と転送アクションの検索条件を調整
+
 ### Deprecated
 
 ### Removed
