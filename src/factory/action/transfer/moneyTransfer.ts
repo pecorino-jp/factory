@@ -97,13 +97,17 @@ export type IAction<T extends AccountFactory.AccountType> = ActionFactory.IActio
  */
 export interface ISortOrder {
     /**
+     * アクション開始日時順
+     */
+    startDate?: SortType;
+    /**
      * アクション完了日時順
      */
     endDate?: SortType;
     /**
      * 金額順
      */
-    amount?: SortType;
+    // amount?: SortType;
 }
 
 /**
@@ -120,5 +124,5 @@ export interface ISearchConditions<T extends AccountFactory.AccountType> {
     /**
      * 口座番号
      */
-    accountNumber: string;
+    accountNumber?: string;
 }

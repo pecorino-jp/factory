@@ -11,11 +11,13 @@ export enum TypeOf {
      */
     Account = 'Account'
 }
+
 /**
  * 口座タイプ
  * Pecorinoサービス利用側で定義&管理する想定
  */
 export type AccountType = string;
+
 /**
  * 進行中取引インターフェース
  */
@@ -30,6 +32,7 @@ export interface IPendingTransaction {
      */
     amount: number;
 }
+
 /**
  * 口座インターフェース
  */
@@ -72,6 +75,7 @@ export interface IAccount<T extends AccountType> {
      */
     status: AccountStatusType;
 }
+
 /**
  * ソート条件インターフェース
  */
@@ -79,7 +83,7 @@ export interface ISortOrder {
     /**
      * 口座番号順
      */
-    accountNumber?: SortType;
+    // accountNumber?: SortType;
     /**
      * 開設日時順
      */
@@ -87,8 +91,9 @@ export interface ISortOrder {
     /**
      * 残高順
      */
-    balance?: SortType;
+    // balance?: SortType;
 }
+
 /**
  * 口座検索条件インターフェース
  */
@@ -103,11 +108,11 @@ export interface ISearchConditions<T extends AccountType> {
     /**
      * 口座番号リスト
      */
-    accountNumbers: string[];
+    accountNumbers?: string[];
     /**
      * 口座ステータスリスト
      */
-    statuses: AccountStatusType[];
+    statuses?: AccountStatusType[];
     /**
      * 口座名義
      */
