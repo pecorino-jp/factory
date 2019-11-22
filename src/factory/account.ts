@@ -1,4 +1,5 @@
 import AccountStatusType from './accountStatusType';
+import { IProject } from './project';
 import SortType from './sortType';
 import TransactionType from './transactionType';
 
@@ -37,6 +38,7 @@ export interface IPendingTransaction {
  * 口座インターフェース
  */
 export interface IAccount<T extends AccountType> {
+    project: IProject;
     typeOf: TypeOf;
     /**
      * 口座タイプ
