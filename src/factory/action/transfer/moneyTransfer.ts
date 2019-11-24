@@ -110,6 +110,13 @@ export interface ISortOrder {
     // amount?: SortType;
 }
 
+export interface IProjectSearchConditions {
+    id?: {
+        $eq?: string;
+        $ne?: string;
+    };
+}
+
 /**
  * 検索条件インターフェース
  */
@@ -125,4 +132,5 @@ export interface ISearchConditions<T extends AccountFactory.AccountType> {
      * 口座番号
      */
     accountNumber?: string;
+    project?: IProjectSearchConditions;
 }

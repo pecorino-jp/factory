@@ -96,6 +96,13 @@ export interface ISortOrder {
     // balance?: SortType;
 }
 
+export interface IProjectSearchConditions {
+    id?: {
+        $eq?: string;
+        $ne?: string;
+    };
+}
+
 /**
  * 口座検索条件インターフェース
  */
@@ -111,6 +118,7 @@ export interface ISearchConditions<T extends AccountType> {
      * 口座番号リスト
      */
     accountNumbers?: string[];
+    project?: IProjectSearchConditions;
     /**
      * 口座ステータスリスト
      */

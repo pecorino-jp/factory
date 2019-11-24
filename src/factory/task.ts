@@ -68,6 +68,13 @@ export interface ISortOrder {
     numberOfTried?: SortType;
 }
 
+export interface IProjectSearchConditions {
+    id?: {
+        $eq?: string;
+        $ne?: string;
+    };
+}
+
 /**
  * 注文検索条件インターフェース
  */
@@ -75,6 +82,7 @@ export interface ISearchConditions<T extends TaskName | string> {
     limit?: number;
     page?: number;
     sort?: ISortOrder;
+    project?: IProjectSearchConditions;
     name?: T;
     statuses?: TaskStatus[];
     runsFrom?: Date;
