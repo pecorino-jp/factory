@@ -19,6 +19,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - 口座検索条件を拡張
 - 転送アクション検索条件を拡張
 - タスク検索条件を拡張
+- update typescript
 
 ### Deprecated
 

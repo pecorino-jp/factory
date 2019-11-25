@@ -83,17 +83,9 @@ export interface IAccount<T extends AccountType> {
  */
 export interface ISortOrder {
     /**
-     * 口座番号順
-     */
-    // accountNumber?: SortType;
-    /**
      * 開設日時順
      */
     openDate?: SortType;
-    /**
-     * 残高順
-     */
-    // balance?: SortType;
 }
 
 export interface IProjectSearchConditions {
