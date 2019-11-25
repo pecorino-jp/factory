@@ -18,6 +18,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v3.0.0 - 2019-11-25
+
+### Added
+
+- プロジェクトインターフェースを追加
+
+### Changed
+
+- 口座にプロジェクト属性を追加
+- アクションにプロジェクト属性を追加
+- タスクにプロジェクト属性を追加
+- 取引にプロジェクト属性を追加
+- 口座検索条件を拡張
+- 転送アクション検索条件を拡張
+- タスク検索条件を拡張
+- update typescript
+
 ## v2.0.1 - 2019-03-15
 
 ### Changed

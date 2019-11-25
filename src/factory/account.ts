@@ -1,4 +1,5 @@
 import AccountStatusType from './accountStatusType';
+import { IProject } from './project';
 import SortType from './sortType';
 import TransactionType from './transactionType';
 
@@ -37,6 +38,7 @@ export interface IPendingTransaction {
  * 口座インターフェース
  */
 export interface IAccount<T extends AccountType> {
+    project: IProject;
     typeOf: TypeOf;
     /**
      * 口座タイプ
@@ -81,17 +83,16 @@ export interface IAccount<T extends AccountType> {
  */
 export interface ISortOrder {
     /**
-     * 口座番号順
-     */
-    // accountNumber?: SortType;
-    /**
      * 開設日時順
      */
     openDate?: SortType;
-    /**
-     * 残高順
-     */
-    // balance?: SortType;
+}
+
+export interface IProjectSearchConditions {
+    id?: {
+        $eq?: string;
+        $ne?: string;
+    };
 }
 
 /**
@@ -109,6 +110,7 @@ export interface ISearchConditions<T extends AccountType> {
      * 口座番号リスト
      */
     accountNumbers?: string[];
+    project?: IProjectSearchConditions;
     /**
      * 口座ステータスリスト
      */

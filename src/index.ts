@@ -14,6 +14,7 @@ import * as ClientUserFactory from './factory/clientUser';
 import * as EmailMessageFactory from './factory/creativeWork/message/email';
 import CreativeWorkType from './factory/creativeWorkType';
 import PriceCurrency from './factory/priceCurrency';
+import * as ProjectFactory from './factory/project';
 import * as TaskFactory from './factory/task';
 import * as CancelMoneyTransferTaskFactory from './factory/task/cancelMoneyTransfer';
 import * as MoneyTransferTaskFactory from './factory/task/moneyTransfer';
@@ -64,6 +65,7 @@ export namespace creativeWork {
 }
 export import creativeWorkType = CreativeWorkType;
 export import priceCurrency = PriceCurrency;
+export import project = ProjectFactory;
 export namespace task {
     export import IAttributes = TaskFactory.IAttributes;
     export import IExecutionResult = TaskFactory.IExecutionResult;

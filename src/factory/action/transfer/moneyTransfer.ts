@@ -100,14 +100,13 @@ export interface ISortOrder {
      * アクション開始日時順
      */
     startDate?: SortType;
-    /**
-     * アクション完了日時順
-     */
-    endDate?: SortType;
-    /**
-     * 金額順
-     */
-    // amount?: SortType;
+}
+
+export interface IProjectSearchConditions {
+    id?: {
+        $eq?: string;
+        $ne?: string;
+    };
 }
 
 /**
@@ -125,4 +124,5 @@ export interface ISearchConditions<T extends AccountFactory.AccountType> {
      * 口座番号
      */
     accountNumber?: string;
+    project?: IProjectSearchConditions;
 }
