@@ -8,6 +8,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## v3.0.0 - 2019-11-25
+
+### Added
+
 - プロジェクトインターフェースを追加
 
 ### Changed
@@ -20,14 +34,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - 転送アクション検索条件を拡張
 - タスク検索条件を拡張
 - update typescript
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## v2.0.1 - 2019-03-15
 
