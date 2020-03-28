@@ -125,4 +125,8 @@ export interface ISearchConditions<T extends AccountFactory.AccountType> {
      */
     accountNumber?: string;
     project?: IProjectSearchConditions;
+    purpose?: {
+        typeOf?: { $eq?: string };
+        id?: { $eq?: string };
+    };
 }
