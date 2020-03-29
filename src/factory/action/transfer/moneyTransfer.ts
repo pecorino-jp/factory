@@ -1,5 +1,6 @@
 import * as AccountFactory from '../../account';
 import * as ActionFactory from '../../action';
+import ActionStatusType from '../../actionStatusType';
 import ActionType from '../../actionType';
 import SortType from '../../sortType';
 import TransactionType from '../../transactionType';
@@ -124,9 +125,16 @@ export interface ISearchConditions {
      * 口座番号
      */
     accountNumber?: string;
+    actionStatus?: {
+        $in?: ActionStatusType[];
+    };
     project?: IProjectSearchConditions;
     purpose?: {
         typeOf?: { $eq?: string };
         id?: { $eq?: string };
+    };
+    startDate?: {
+        $gte?: Date;
+        $lte?: Date;
     };
 }

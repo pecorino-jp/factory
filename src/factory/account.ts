@@ -102,21 +102,20 @@ export interface ISearchConditions {
     limit?: number;
     page?: number;
     sort?: ISortOrder;
-    /**
-     * 口座タイプ
-     */
-    accountType?: string;
-    /**
-     * 口座番号リスト
-     */
+    accountNumber?: {
+        $eq?: string;
+        $in?: string[];
+        $regex?: string;
+    };
     accountNumbers?: string[];
+    accountType?: string;
+    name?: {
+        $regex?: string;
+    };
+    openDate?: {
+        $gte?: Date;
+        $lte?: Date;
+    };
     project?: IProjectSearchConditions;
-    /**
-     * 口座ステータスリスト
-     */
     statuses?: AccountStatusType[];
-    /**
-     * 口座名義
-     */
-    name?: string;
 }

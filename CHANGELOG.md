@@ -11,6 +11,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Changed
 
 - 口座タイプによるジェネリック型を削除
+- 口座検索条件拡張
+- アクション検索条件拡張
 
 ### Deprecated
 
