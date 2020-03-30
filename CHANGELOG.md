@@ -18,6 +18,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v4.0.0 - 2020-03-30
+
+### Changed
+
+- 口座タイプによるジェネリック型を削除
+- 口座検索条件拡張
+- アクション検索条件拡張
+
 ## v3.1.0 - 2020-03-28
 
 ### Changed

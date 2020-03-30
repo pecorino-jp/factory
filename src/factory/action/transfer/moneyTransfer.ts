@@ -1,5 +1,6 @@
 import * as AccountFactory from '../../account';
 import * as ActionFactory from '../../action';
+import ActionStatusType from '../../actionStatusType';
 import ActionType from '../../actionType';
 import SortType from '../../sortType';
 import TransactionType from '../../transactionType';
@@ -28,12 +29,12 @@ export interface IAnonymousLocation {
 /**
  * 口座インターフェース
  */
-export interface IAccount<T extends AccountFactory.AccountType> {
+export interface IAccount {
     typeOf: AccountFactory.TypeOf.Account;
     /**
      * 口座タイプ
      */
-    accountType: T;
+    accountType: string;
     /**
      * 口座番号
      */
@@ -47,7 +48,7 @@ export interface IAccount<T extends AccountFactory.AccountType> {
 /**
  * 転送元あるいは転送先の場所インターフェース
  */
-export type ILocation<T extends AccountFactory.AccountType> = IAnonymousLocation | IAccount<T>;
+export type ILocation = IAnonymousLocation | IAccount;
 
 export type IObject = any;
 
@@ -70,7 +71,7 @@ export interface IPurpose {
     id: string;
 }
 
-export interface IAttributes<T extends AccountFactory.AccountType> extends ActionFactory.IAttributes<IObject, IResult> {
+export interface IAttributes extends ActionFactory.IAttributes<IObject, IResult> {
     typeOf: ActionType.MoneyTransfer;
     /**
      * どんな取引によって発生した転送アクションか
@@ -83,14 +84,14 @@ export interface IAttributes<T extends AccountFactory.AccountType> extends Actio
     /**
      * 転送元
      */
-    fromLocation: ILocation<T>;
+    fromLocation: ILocation;
     /**
      * 転送先
      */
-    toLocation: ILocation<T>;
+    toLocation: ILocation;
 }
 
-export type IAction<T extends AccountFactory.AccountType> = ActionFactory.IAction<IAttributes<T>>;
+export type IAction = ActionFactory.IAction<IAttributes>;
 
 /**
  * ソート条件インターフェース
@@ -112,21 +113,28 @@ export interface IProjectSearchConditions {
 /**
  * 検索条件インターフェース
  */
-export interface ISearchConditions<T extends AccountFactory.AccountType> {
+export interface ISearchConditions {
     limit?: number;
     page?: number;
     sort?: ISortOrder;
     /**
      * 口座タイプ
      */
-    accountType: T;
+    accountType?: string;
     /**
      * 口座番号
      */
     accountNumber?: string;
+    actionStatus?: {
+        $in?: ActionStatusType[];
+    };
     project?: IProjectSearchConditions;
     purpose?: {
         typeOf?: { $eq?: string };
         id?: { $eq?: string };
+    };
+    startDate?: {
+        $gte?: Date;
+        $lte?: Date;
     };
 }

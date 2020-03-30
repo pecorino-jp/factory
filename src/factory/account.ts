@@ -37,13 +37,13 @@ export interface IPendingTransaction {
 /**
  * 口座インターフェース
  */
-export interface IAccount<T extends AccountType> {
+export interface IAccount {
     project: IProject;
     typeOf: TypeOf;
     /**
      * 口座タイプ
      */
-    accountType: T;
+    accountType: string;
     /**
      * 口座番号
      */
@@ -98,25 +98,24 @@ export interface IProjectSearchConditions {
 /**
  * 口座検索条件インターフェース
  */
-export interface ISearchConditions<T extends AccountType> {
+export interface ISearchConditions {
     limit?: number;
     page?: number;
     sort?: ISortOrder;
-    /**
-     * 口座タイプ
-     */
-    accountType: T;
-    /**
-     * 口座番号リスト
-     */
+    accountNumber?: {
+        $eq?: string;
+        $in?: string[];
+        $regex?: string;
+    };
     accountNumbers?: string[];
+    accountType?: string;
+    name?: {
+        $regex?: string;
+    };
+    openDate?: {
+        $gte?: Date;
+        $lte?: Date;
+    };
     project?: IProjectSearchConditions;
-    /**
-     * 口座ステータスリスト
-     */
     statuses?: AccountStatusType[];
-    /**
-     * 口座名義
-     */
-    name?: string;
 }
