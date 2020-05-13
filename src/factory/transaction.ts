@@ -28,6 +28,11 @@ export interface IStartParams<T extends TransactionType, TAgent extends IAgent, 
      */
     typeOf: T;
     /**
+     * 取引番号
+     * サービス使用側が指定するグローバルユニークな番号
+     */
+    transactionNumber?: string;
+    /**
      * 取引主体
      */
     agent: TAgent;
