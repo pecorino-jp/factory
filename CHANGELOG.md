@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- 返金タスクを追加
+- アクションにidentifierを追加
+
 ### Changed
 
 ### Deprecated

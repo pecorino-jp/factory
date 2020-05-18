@@ -3,13 +3,17 @@
  */
 enum TaskName {
     /**
-     * 現金転送取消
+     * 通貨転送中止
      */
     CancelMoneyTransfer = 'cancelMoneyTransfer',
     /**
-     * 現金転送
+     * 通貨転送
      */
-    MoneyTransfer = 'moneyTransfer'
+    MoneyTransfer = 'moneyTransfer',
+    /**
+     * 通貨転送返金
+     */
+    ReturnMoneyTransfer = 'returnMoneyTransfer'
 }
 
 export default TaskName;

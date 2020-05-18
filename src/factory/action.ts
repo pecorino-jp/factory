@@ -23,6 +23,8 @@ export interface IPurpose {
  * アクション属性
  */
 export interface IAttributes<TObject, TResult> {
+    id?: string;
+    identifier?: string;
     project: IProject;
     /**
      * アクションタイプ
@@ -35,7 +37,7 @@ export interface IAttributes<TObject, TResult> {
     /**
      * アクション主体者
      */
-    agent: IParticipant;
+    agent?: IParticipant;
     /**
      * アクション受取者
      */
