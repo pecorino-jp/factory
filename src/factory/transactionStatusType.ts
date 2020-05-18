@@ -5,7 +5,8 @@ enum TransactionStatusType {
     InProgress = 'InProgress',
     Canceled = 'Canceled',
     Confirmed = 'Confirmed',
-    Expired = 'Expired'
+    Expired = 'Expired',
+    Returned = 'Returned'
 }
 
 export default TransactionStatusType;
