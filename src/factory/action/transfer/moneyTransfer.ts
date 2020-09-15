@@ -3,6 +3,7 @@ import * as ActionFactory from '../../action';
 import ActionStatusType from '../../actionStatusType';
 import ActionType from '../../actionType';
 import SortType from '../../sortType';
+import { IThing } from '../../thing';
 import TransactionType from '../../transactionType';
 
 export type IAgent = ActionFactory.IParticipant;
@@ -11,7 +12,7 @@ export type IRecipient = ActionFactory.IParticipant;
 /**
  * 口座以外の匿名場所インターフェース
  */
-export interface IAnonymousLocation {
+export interface IAnonymousLocation extends IThing {
     /**
      * ロケーションタイプ
      */
@@ -20,10 +21,6 @@ export interface IAnonymousLocation {
      * ロケーションID
      */
     id?: string;
-    /**
-     * ロケーション名
-     */
-    name?: string;
 }
 
 /**
