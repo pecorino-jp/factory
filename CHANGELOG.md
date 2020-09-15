@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v4.3.0 - 2020-09-15
+
+### Changed
+
+- IAnonymousLocationの汎用性拡張
+
 ## v4.2.0 - 2020-05-18
 
 ### Added
