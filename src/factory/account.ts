@@ -4,16 +4,6 @@ import SortType from './sortType';
 import TransactionType from './transactionType';
 
 /**
- * 口座タイプ
- */
-export enum TypeOf {
-    /**
-     * 普通口座タイプ
-     */
-    Account = 'Account'
-}
-
-/**
  * 進行中取引インターフェース
  */
 export interface IPendingTransaction {
@@ -33,7 +23,10 @@ export interface IPendingTransaction {
  */
 export interface IAccount {
     project: IProject;
-    typeOf: TypeOf;
+    /**
+     * 口座種別
+     */
+    typeOf: string;
     /**
      * 口座タイプ
      */

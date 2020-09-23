@@ -1,4 +1,3 @@
-import * as AccountFactory from '../../account';
 import * as ActionFactory from '../../action';
 import ActionStatusType from '../../actionStatusType';
 import ActionType from '../../actionType';
@@ -27,7 +26,7 @@ export interface IAnonymousLocation extends IThing {
  * 口座インターフェース
  */
 export interface IAccount {
-    typeOf: AccountFactory.TypeOf.Account;
+    typeOf: string;
     /**
      * 口座タイプ
      */

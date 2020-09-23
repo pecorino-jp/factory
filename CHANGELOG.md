@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Changed
 
+- 口座のtypeOfをString型に拡張
+
 ### Deprecated
 
 ### Removed
