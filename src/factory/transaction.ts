@@ -18,6 +18,10 @@ export interface IAgent {
     url?: string;
 }
 
+export interface ISimpleAccount {
+    accountNumber: string;
+}
+
 /**
  * 取引開始パラメーターインターフェース
  */

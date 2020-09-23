@@ -7,6 +7,8 @@ import TransactionType from '../transactionType';
 export type IRecipient = TransactionFactory.IRecipient;
 export type IAgent = TransactionFactory.IAgent;
 
+export type IStartParamsWithoutDetail = TransactionFactory.IStartParams<TransactionType.Deposit, IAgent, IRecipient, IObjectWithoutDetail>;
+
 /**
  * 取引開始パラメーターインターフェース
  */
@@ -18,6 +20,14 @@ export type IResult = any;
  * エラーインターフェース
  */
 export type IError = any;
+
+export interface IObjectWithoutDetail {
+    clientUser?: IClientUser;
+    amount: number;
+    fromLocation?: IAnonymousLocation;
+    toLocation: TransactionFactory.ISimpleAccount;
+    description?: string;
+}
 
 /**
  * 取引対象物インターフェース

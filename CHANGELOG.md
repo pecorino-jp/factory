@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Added
 
+- 取引開始パラメータ(詳細なし)インターフェースを追加
+
 ### Changed
 
 ### Deprecated
