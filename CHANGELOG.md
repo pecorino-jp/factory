@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v4.4.0 - 2020-09-23
+
+### Added
+
+- 取引開始パラメータ(詳細なし)インターフェースを追加
+
 ## v4.3.0 - 2020-09-15
 
 ### Changed
