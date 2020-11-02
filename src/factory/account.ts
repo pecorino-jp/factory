@@ -105,4 +105,8 @@ export interface ISearchConditions {
     };
     project?: IProjectSearchConditions;
     statuses?: AccountStatusType[];
+    typeOf?: {
+        $eq?: string;
+        $in?: string[];
+    };
 }
