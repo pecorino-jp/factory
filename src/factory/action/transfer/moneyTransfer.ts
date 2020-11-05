@@ -1,6 +1,7 @@
 import * as ActionFactory from '../../action';
 import ActionStatusType from '../../actionStatusType';
 import ActionType from '../../actionType';
+import { IMonetaryAmount } from '../../monetaryAmount';
 import SortType from '../../sortType';
 import { IThing } from '../../thing';
 import TransactionType from '../../transactionType';
@@ -76,7 +77,7 @@ export interface IAttributes extends ActionFactory.IAttributes<IObject, IResult>
     /**
      * 金額
      */
-    amount: number;
+    amount: IMonetaryAmount;
     /**
      * 転送元
      */
