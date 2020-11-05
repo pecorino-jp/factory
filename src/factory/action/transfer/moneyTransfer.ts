@@ -77,7 +77,7 @@ export interface IAttributes extends ActionFactory.IAttributes<IObject, IResult>
     /**
      * 金額
      */
-    amount: IMonetaryAmount;
+    amount: number | IMonetaryAmount;
     /**
      * 転送元
      */
