@@ -29,7 +29,7 @@ export interface IAnonymousLocation extends IThing {
 export interface IAccount {
     typeOf: string;
     /**
-     * 口座タイプ
+     * 通貨
      */
     accountType: string;
     /**
@@ -115,15 +115,28 @@ export interface ISearchConditions {
     page?: number;
     sort?: ISortOrder;
     /**
-     * 口座タイプ
-     */
-    accountType?: string;
-    /**
      * 口座番号
+     * @deprecated Use location.accountNumber
      */
     accountNumber?: string;
     actionStatus?: {
         $in?: ActionStatusType[];
+    };
+    amount?: {
+        /**
+         * 通貨
+         */
+        currency?: { $eq?: string };
+    };
+    location?: {
+        /**
+         * 口座番号
+         */
+        accountNumber?: { $eq?: string };
+        /**
+         * 口座種別
+         */
+        typeOf?: { $eq?: string };
     };
     project?: IProjectSearchConditions;
     purpose?: {
