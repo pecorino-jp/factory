@@ -32,6 +32,11 @@ export interface IStartParams<T extends TransactionType, TAgent extends IAgent, 
      */
     typeOf: T;
     /**
+     * 取引識別子
+     * 同識別子に対する進行中取引のユニークネスは保証される
+     */
+    identifier?: string;
+    /**
      * 取引番号
      * サービス使用側が指定するグローバルユニークな番号
      */
