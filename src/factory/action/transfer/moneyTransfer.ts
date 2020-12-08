@@ -66,6 +66,14 @@ export interface IPurpose {
      * 取引ID
      */
     id: string;
+    /**
+     * 取引番号
+     */
+    transactionNumber?: string;
+    /**
+     * 取引識別子
+     */
+    identifier?: string;
 }
 
 export interface IAttributes extends ActionFactory.IAttributes<IObject, IResult> {
@@ -140,8 +148,22 @@ export interface ISearchConditions {
     };
     project?: IProjectSearchConditions;
     purpose?: {
+        /**
+         * 取引タイプ
+         */
         typeOf?: { $eq?: string };
+        /**
+         * 取引ID
+         */
         id?: { $eq?: string };
+        /**
+         * 取引番号
+         */
+        transactionNumber?: { $eq?: string };
+        /**
+         * 取引識別子
+         */
+        identifier?: { $eq?: string };
     };
     startDate?: {
         $gte?: Date;
