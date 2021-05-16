@@ -4,7 +4,7 @@ import ActionType from '../../actionType';
 import { IMonetaryAmount } from '../../monetaryAmount';
 import SortType from '../../sortType';
 import { IThing } from '../../thing';
-import TransactionType from '../../transactionType';
+import TransactionType from '../transactionType';
 
 export type IAgent = ActionFactory.IParticipant;
 export type IRecipient = ActionFactory.IParticipant;
