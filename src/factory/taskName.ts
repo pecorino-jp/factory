@@ -9,11 +9,7 @@ enum TaskName {
     /**
      * 口座転送
      */
-    AccountMoneyTransfer = 'accountMoneyTransfer',
-    /**
-     * 口座転送返金
-     */
-    ReturnAccountMoneyTransfer = 'returnAccountMoneyTransfer'
+    AccountMoneyTransfer = 'accountMoneyTransfer'
 }
 
 export default TaskName;

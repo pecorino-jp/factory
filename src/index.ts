@@ -13,7 +13,6 @@ import * as ProjectFactory from './factory/project';
 import * as TaskFactory from './factory/task';
 import * as AccountMoneyTransferTaskFactory from './factory/task/accountMoneyTransfer';
 import * as CancelAccountMoneyTransferTaskFactory from './factory/task/cancelAccountMoneyTransfer';
-import * as ReturnAccountMoneyTransferTaskFactory from './factory/task/returnAccountMoneyTransfer';
 import TaskName from './factory/taskName';
 import TaskStatus from './factory/taskStatus';
 
@@ -41,7 +40,6 @@ export namespace task {
     export import ITask = TaskFactory.ITask;
     export import accountMoneyTransfer = AccountMoneyTransferTaskFactory;
     export import cancelAccountMoneyTransfer = CancelAccountMoneyTransferTaskFactory;
-    export import returnAccountMoneyTransfer = ReturnAccountMoneyTransferTaskFactory;
 }
 export import sortType = SortType;
 export import taskName = TaskName;
